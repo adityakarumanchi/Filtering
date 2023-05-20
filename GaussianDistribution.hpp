@@ -5,6 +5,8 @@
 class GaussianDistribution
 {
     public:
+        Eigen::VectorXd mu;
+        Eigen::MatrixXd Sigma;
         GaussianDistribution(const Eigen::VectorXd& m, const Eigen::MatrixXd& C) : mu{m}, Sigma{C} {}
 
         double_t probability(Eigen::VectorXd X) //https://en.wikipedia.org/wiki/Multivariate_normal_distribution#Density_function
@@ -15,8 +17,6 @@ class GaussianDistribution
             return p_of_x_;
         };
 
-    private:
-        Eigen::VectorXd mu;
-        Eigen::MatrixXd Sigma;
-        // To-do: check that Sigma is positive-definite and use it as condition for calculating probability.
+    // private:
+    //     // To-do: check that Sigma is positive-definite and use it as condition for calculating probability.
 };

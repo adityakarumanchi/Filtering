@@ -1,8 +1,10 @@
 #include <iostream>
 // #include <eigen3/Eigen/Dense>
-#include "/home/aditya/eigen/Eigen/Dense"
 #include <vector>
 #include <numeric>
+#include <random>
+#include <gtest/gtest.h>
+#include "/home/aditya/eigen/Eigen/Dense"
 // #include "GaussianDistribution.hpp"
 #include "GaussianSampler.hpp"
 
@@ -54,20 +56,9 @@ void bicycle_dist_nl_discrete(Eigen::Vector4d& X, const float U, const float dxp
 //         std::cout<<elem<<" ";
 // }
 
-int main()
-{
-    // Params VehParams;
-    // Eigen::Vector4d X(0.01, 0.01, 0.01, 0);
-    // std::vector<double> Weights(5, 0.1);
-    // GMMSampling(Weights);
-    Eigen::Vector3d mu{0,0,0};
-    Eigen::Matrix3d Sigma{{1,0,0},
-            {0,1,0},
-            {0,0,1}};
-    GaussianDistribution G1(mu, Sigma);
-    Eigen::Vector3d X{1, 1, 1};
 
-    std::cout << G1.probability(X*0.05);
-    GaussianSampler GS1(G1, 1e3, 5);
-    return 0;
+
+int main(int argc, char **argv) {
+  ::testing::InitGoogleTest(&argc, argv);
+  return RUN_ALL_TESTS();
 }
