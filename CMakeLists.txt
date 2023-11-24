@@ -14,10 +14,9 @@ find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 enable_testing()
 add_executable(Filtering
               GaussianDistribution.hpp
-              GaussianSampler.hpp
               GMMDistribution.hpp
               test_GaussianDistribution.cpp
-              test_GaussianSampler.cpp
+              test_GMMDistribution.cpp
               main.cpp)
 target_link_libraries(Filtering Eigen3::Eigen GTest::gtest_main)
 
