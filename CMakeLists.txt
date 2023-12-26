@@ -5,7 +5,7 @@ set(CMAKE_CXX_STANDARD 20)
 include(FetchContent)
 FetchContent_Declare(
   googletest
-  URL https://github.com/google/googletest/archive/refs/tags/v1.13.0.zip
+  URL https://github.com/google/googletest/archive/refs/tags/v1.14.0.zip
 )
 FetchContent_MakeAvailable(googletest)
 
@@ -14,7 +14,9 @@ find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 enable_testing()
 add_executable(Filtering
               GaussianDistribution.hpp
+              GaussianDistribution.cpp
               GMMDistribution.hpp
+              GMMDistribution.cpp
               test_GaussianDistribution.cpp
               test_GMMDistribution.cpp
               main.cpp)
