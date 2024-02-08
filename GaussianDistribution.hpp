@@ -1,3 +1,6 @@
+#ifndef GAUSSIAN_DISTRIBUTION_HPP
+#define GAUSSIAN_DISTRIBUTION_HPP
+
 #include <iostream>
 #include <cmath>
 #include "/home/aditya/eigen/Eigen/Dense"
@@ -15,3 +18,5 @@ class GaussianDistribution
     // private:
     //     // To-do: check that Sigma is positive-definite and use it as condition for calculating probability.
 };
+
+#endif
