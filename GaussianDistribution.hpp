@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <cmath>
-#include "/home/aditya/eigen/Eigen/Dense"
+#include "Eigen/Dense"
 
 class GaussianDistribution
 {

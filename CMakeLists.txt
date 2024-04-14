@@ -9,6 +9,9 @@ FetchContent_Declare(
 )
 FetchContent_MakeAvailable(googletest)
 
+# message("CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
+list(APPEND CMAKE_PREFIX_PATH "/home/aditya/GitRepos/eigen/")
+# message("CMAKE_PREFIX_PATH: ${CMAKE_PREFIX_PATH}")
 find_package(Eigen3 3.4 REQUIRED NO_MODULE)
 
 enable_testing()
