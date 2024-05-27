@@ -1,7 +1,8 @@
 #include <iostream>
 #include <cmath>
 #include <numeric>
-#include "/home/aditya/eigen/Eigen/Dense"
+#include <vector>
+#include "Eigen/Dense"
 #include "GMMDistribution.hpp"
 
 class GMMSampler

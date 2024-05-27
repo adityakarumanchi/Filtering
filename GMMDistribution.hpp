@@ -4,6 +4,7 @@
 #include <iostream>
 #include <cmath>
 #include <numeric>
+#include <vector>
 #include "Eigen/Dense"
 #include "GaussianDistribution.hpp"
 

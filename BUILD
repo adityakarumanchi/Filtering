@@ -12,19 +12,15 @@ cc_library(
     hdrs = ["GaussianDistribution.hpp",
             "GMMDistribution.hpp",
             "GaussianSampler.hpp"],
-    deps = [":eigen"]
+    deps = ["@eigen"],
+    visibility = ["//visibility:public"],
 )
 
-# cc_library(
-#     name = "Filtering",
-#     srcs = ["mylib.cc"],
-#     hdrs = ["mylib.h"],
-#     deps = [":lower-level-lib"]
+# cc_test(
+#     name = "Filtering_test",
+#     srcs = ["test_GaussianDistribution.cpp",
+#             "test_GaussianSampler.cpp",
+#             "test_GMMDistribution.cpp"],
+#     deps = ["@eigen"],
+#     visibility = ["//visibility:public"],
 # )
-cc_test(
-    name = "Filtering_test",
-    srcs = ["test_GaussianDistribution.cpp",
-            "test_GaussianSampler.cpp",
-            "test_GMMDistribution.cpp"],
-    deps = [":eigen"]
-)
