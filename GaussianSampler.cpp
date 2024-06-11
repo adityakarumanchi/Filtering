@@ -15,16 +15,6 @@ std::vector<Eigen::VectorXd> GaussianSampler::generate_samples()
     return return_vec;
 }
 
-double_t GaussianSampler::gen_std_normal_dist(uint64_t seed_in)
-{
-    std::default_random_engine generator{seed_in};
-    // std::normal_distribution<double_t> std_normal_dist(0.0, 1.0); -> This is apparently invalid for initialiazing non-static class members.
-    // See https://stackoverflow.com/a/32155815/10353367
-    std::normal_distribution<double_t> std_normal_dist{0.0, 1.0};
-    double_t rand_num = std_normal_dist(generator);
-    return rand_num;
-}
-
 Eigen::VectorXd GaussianSampler::generate_z()
 {
     Eigen::VectorXd z_vector{G_.mu}; // Init with G_.mu just to get same size
@@ -33,4 +23,14 @@ Eigen::VectorXd GaussianSampler::generate_z()
     // Then sample from std. normal distribution using those seeds
     std::transform(seeds.begin(), seeds.end(), z_vector.begin(), &GaussianSampler::gen_std_normal_dist);
     return z_vector;
+}
+
+double_t GaussianSampler::gen_std_normal_dist(uint64_t seed_in)
+{
+    std::default_random_engine generator{seed_in};
+    // std::normal_distribution<double_t> std_normal_dist(0.0, 1.0); -> This is apparently invalid for initialiazing non-static class members.
+    // See https://stackoverflow.com/a/32155815/10353367
+    std::normal_distribution<double_t> std_normal_dist{0.0, 1.0};
+    double_t rand_num = std_normal_dist(generator);
+    return rand_num;
 }

@@ -35,8 +35,8 @@ TEST(test_GaussianSampler, testGaussianSamplProbability)
     }
     counts.back() = n_samples - std::accumulate(counts.begin(), counts.end(), 0);
 
-    for (auto& count : counts)
-    {
-      std::cout << "Bin count: " << count << std::endl;
-    }
+    // for (auto& count : counts)
+    // {
+    //   std::cout << "Bin count: " << count << std::endl;
+    // }
 }
