@@ -1,5 +1,5 @@
-#ifndef GMMDISTRIBUTION_H
-#define GMMDISTRIBUTION_H
+#ifndef GMMDISTRIBUTION_HPP
+#define GMMDISTRIBUTION_HPP
 
 #include <iostream>
 #include <cmath>
@@ -33,4 +33,4 @@ class GMMDistribution
         std::vector<double_t> w_vector;
 };
 
-#endif
+#endif // GMMDISTRIBUTION_HPP

@@ -1,6 +1,6 @@
 #include <chrono>
 #include <gtest/gtest.h>
-#include "GMMDistribution.hpp"
+#include "src/GMMDistribution.hpp"
 
 TEST(test_GMMDistribution, testGMMDistProbability)
 {

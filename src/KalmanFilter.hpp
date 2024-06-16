@@ -1,6 +1,8 @@
+#ifndef KALMAN_FILTER_HPP
+#define KALMAN_FILTER_HPP
+
 #include "Eigen/Dense"
-#include <Eigen/src/Core/Matrix.h>
-#include <cstddef>
+// #include <Eigen/src/Core/Matrix.h>
 
 // Template for dims probably not required?
 // template<int dim_state, int dim_obs>
@@ -24,3 +26,5 @@ class KalmanFilter
         Eigen::VectorXd X_k_prev;
         Eigen::VectorXd Y_k;
 };
+
+#endif // KALMAN_FILTER_HPP

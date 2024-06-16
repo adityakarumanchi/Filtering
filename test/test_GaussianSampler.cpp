@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "GaussianSampler.hpp"
+#include "src/GaussianSampler.hpp"
 
 TEST(test_GaussianSampler, testGaussianSamplProbability)
 {
