@@ -3,7 +3,6 @@
 
 #include <vector>
 #include "Eigen/Dense"
-// #include <Eigen/src/Core/Matrix.h>
 
 class DiscreteStateSpace
 {

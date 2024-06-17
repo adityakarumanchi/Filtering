@@ -2,7 +2,6 @@
 #define KALMAN_FILTER_HPP
 
 #include "Eigen/Dense"
-// #include <Eigen/src/Core/Matrix.h>
 
 // Template for dims probably not required?
 // template<int dim_state, int dim_obs>

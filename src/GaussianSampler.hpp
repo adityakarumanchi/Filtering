@@ -1,3 +1,6 @@
+#ifndef GAUSSIAN_SAMPLER_HPP
+#define GAUSSIAN_SAMPLER_HPP
+
 #include <iostream>
 #include <cmath>
 #include <numeric>
@@ -22,3 +25,5 @@ class GaussianSampler
         Eigen::MatrixXd L {G_.Sigma.llt().matrixL()}; // Cholesky Decomp factor
         Eigen::VectorXd generate_z();
 };
+
+#endif // GAUSSIAN_SAMPLER_HPP
